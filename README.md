@@ -2,6 +2,8 @@
 
 AstraFlow is a control and management system for working with Astra-based streaming infrastructure.
 
+![AstraFlow Screenshot](./screenshot.jpg)
+
 The project is designed to simplify the management of streaming nodes, configurations, connections, and related data through a convenient web interface and backend service. It combines a Go backend with a React frontend and uses a local database to store application data and settings.
 
 ## Purpose
