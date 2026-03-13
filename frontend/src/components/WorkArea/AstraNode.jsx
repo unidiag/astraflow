@@ -32,6 +32,11 @@ export default function AstraNode({ data }) {
   const bottomPadding = 10;
 
   const height = headerHeight + ports * portSpacing + bottomPadding;
+  const [lastClick, setLastClick] = useState(0);
+
+
+
+  
 
   const borderColor =
     theme.palette.mode === "dark"
@@ -132,28 +137,35 @@ export default function AstraNode({ data }) {
     return out;
   }, [sessions]);
 
-  const renderInputs = () =>
-    inputs.map((p, i) => (
-      <Handle
-        key={p.id}
-        id={String(p.id)}
-        type="target"
-        position={Position.Left}
-        style={{
-          top: headerHeight + i * portSpacing,
-          background: "#2196f3",
-          width: 10,
-          height: 10
-        }}
-        onDoubleClick={(e) => {
-          e.stopPropagation();
 
-          if (data.onEditStream) {
-            data.onEditStream(p.stream_id);
-          }
-        }}
-      />
-    ));
+  const renderInputs = () =>
+      inputs.map((p, i) => (
+        <Handle
+          key={p.id}
+          id={String(p.id)}
+          type="target"
+          position={Position.Left}
+          style={{
+            top: headerHeight + i * portSpacing,
+            background: "#2196f3",
+            width: 10,
+            height: 10
+          }}
+          onPointerDown={(e) => {
+            e.stopPropagation();
+
+            const now = Date.now();
+
+            if (now - lastClick < 300) {
+              if (data.onEditStream) {
+                data.onEditStream(p.stream_id);
+              }
+            }
+
+            setLastClick(now);
+          }}
+        />
+  ));
 
   const renderOutputs = () =>
     outputs.map((o, i) => {
