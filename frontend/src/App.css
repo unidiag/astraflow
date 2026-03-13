@@ -1,0 +1,4 @@
+.react-flow__edge.selected path {
+    stroke: #7a7777 !important;
+    stroke-width: 2;
+}

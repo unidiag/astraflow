@@ -1,0 +1,63 @@
+{
+  
+  "theme": { "light": "Light", "dark": "Dark" },
+  "lang": "Language",
+  "hello": "Hello, {{name}}!",
+  "exit": "Exit",
+
+  "menu": { "servers": "Servers", "stats": "Statistics", "export": "Export" },
+  "settings": { "main":"Settings", "profile": "Profile", "apps": "My applications", "exit": "Sign out" },
+  "footer": { "rights": "All rights reserved {{site}}. Build {{version}}" },
+
+  "go_home" : "Go Home",
+  "unknown_route" : "Unknown route",
+  "underconst": "Under constuction..",
+  "underlate":  "Hey! Please check out this site later. We are doing some maintenance on it right now.",
+
+  "login": {
+    "login": "Login",
+    "password": "Password",
+    "remember": "Remember me",
+    "entering": "Signing in...",
+    "enter": "Sign in",
+    "exit": "Sign out",
+    "losted": "Forgot password?",
+    "create": "Create account",
+    "req_login_pass": "Login and password are required",
+    "failed": "Login failed",
+    "adduser":"Add user"
+  }, 
+  "users":"Users",
+  "restart": "Restart",
+
+  "account": "Account",
+  "profile": "Settings program",
+
+  "recovery":{
+    "indicate_email" : "Specify your registered email address.",
+    "read_mail" : "If the email is valid, please read the received message and click the one-time link.",
+    "cancel" : "Cancellation of password recovery request.",
+    "recover" : "Recover Password",
+    "sending" : "Sending...",
+    "send" : "Send Link",
+    "return_login" : "Return to Login",
+    "title":    "Password Reset Page",
+    "recover2": "Password Recovery",
+    "newpass":  "New Password",
+    "changing": "Changing..",
+    "change":   "Change"
+  },
+
+  "newacc": {
+    "passreq" : "Passwords must match!",
+    "ok" : "Account created. To activate, please confirm your email.",
+    "err" : "Registration error.",
+    "repeatpass" : "Repeat password",
+    "making" : "Creating..." ,
+    "make" : "Create"
+  },
+
+  "close": "Close",
+  "save": "Save"
+
+}
