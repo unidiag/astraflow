@@ -13,7 +13,7 @@ var mu sync.Mutex
 var _debug_ = false
 var port = 9000
 var err error
-var _version_ = "1.01"  // 2026-03-12 22:40:33
+var _version_ = "1.02"  // 2026-03-14 08:33:25
 
 var settings map[string]string
 

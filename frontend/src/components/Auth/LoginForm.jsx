@@ -79,7 +79,7 @@ export default function LoginForm({ onSuccess, onSwitch }) {
         {err ? <Alert severity="error">{err}</Alert> : null}
 
         <TextField
-          label="Login"
+          label={t("login.login2")}
           type="login"
           value={login}
           size="small"
