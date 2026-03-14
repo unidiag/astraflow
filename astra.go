@@ -67,10 +67,14 @@ func (n *ClusterNode) Control(cmd string) (map[string]any, error) {
 		db.Model(n).Update("status", "offline")
 		return nil, err
 	}
-	db.Model(n).Updates(map[string]any{
-		"status":       "online",
-		"last_seen_at": time.Now(),
-	})
+
+	// при большом количестве нод, возможны > 1 сек на апдейты бд
+	go func() {
+		db.Model(n).Updates(map[string]any{
+			"status":       "online",
+			"last_seen_at": time.Now(),
+		})
+	}()
 	return ans, nil
 }
 
